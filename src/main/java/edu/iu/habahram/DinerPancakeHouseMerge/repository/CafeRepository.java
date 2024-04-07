@@ -1,22 +1,23 @@
 package edu.iu.habahram.DinerPancakeHouseMerge.repository;
 
-import edu.iu.habahram.DinerPancakeHouseMerge.model.DinerMenu;
+import edu.iu.habahram.DinerPancakeHouseMerge.model.CafeMenu;
 import edu.iu.habahram.DinerPancakeHouseMerge.model.Menu;
 import edu.iu.habahram.DinerPancakeHouseMerge.model.MenuItem;
 import org.springframework.stereotype.Repository;
 
 import java.util.Iterator;
+import java.util.Map;
 
 @Repository
-public class DinerRepository {
+public class CafeRepository {
 
-    public MenuItem[] getTheMenu() {
-        DinerMenu dinerMenu = new DinerMenu();
-        return dinerMenu.getMenuItems();
+    public Map<String, MenuItem> getTheMenu() {
+        CafeMenu cafeMenu = new CafeMenu();
+        return cafeMenu.getItems();
     }
 
     public Iterator<MenuItem> getTheMenuIterator() {
-        Menu dinerMenu = new DinerMenu();
-        return dinerMenu.createIterator();
+        Menu cafeMenu = new CafeMenu();
+        return cafeMenu.createIterator();
     }
 }
