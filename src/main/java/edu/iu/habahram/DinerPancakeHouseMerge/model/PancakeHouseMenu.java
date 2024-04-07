@@ -5,10 +5,14 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PancakeHouseMenu implements Menu {
-    List<MenuItem> menuItems;
+    private String name;
+    private String description;
+    private List<MenuItem> menuItems;
 
-    public PancakeHouseMenu() {
-        menuItems = new ArrayList<MenuItem>();
+    public PancakeHouseMenu(String name, String description) {
+        this.name = name;
+        this.description = description;
+        menuItems = new ArrayList<>();
 
         addItem("K&B's Pancake Breakfast",
                 "Pancakes with scrambled eggs and toast",
@@ -42,20 +46,15 @@ public class PancakeHouseMenu implements Menu {
         return menuItems;
     }
 
+    public String getName() {
+        return name;
+    }
 
-
-    public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for(MenuItem item: getMenuItems()) {
-            stringBuilder.append(item.toString());
-        }
-        return  stringBuilder.toString();
+    public String getDescription() {
+        return description;
     }
 
     public Iterator<MenuItem> createIterator() {
-
         return menuItems.iterator();
     }
-
-    // other menu methods here
 }
