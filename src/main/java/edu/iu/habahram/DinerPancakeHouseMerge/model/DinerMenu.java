@@ -1,6 +1,8 @@
 package edu.iu.habahram.DinerPancakeHouseMerge.model;
 
+
 import java.util.Iterator;
+
 public class DinerMenu extends Menus{
 
 
@@ -31,7 +33,7 @@ public class DinerMenu extends Menus{
     }
 
     public MenuItem[] getMenuItems() {
-        return getItems();
+        return super.getItems();
     }
 
     public String toString() {
@@ -45,6 +47,10 @@ public class DinerMenu extends Menus{
     public Iterator<MenuItem> createIterator() {
         return new DinerMenuIterator(getMenuItems());
     }
+
+
+
+
 
     // other menu methods here
 }

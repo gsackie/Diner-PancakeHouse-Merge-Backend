@@ -4,10 +4,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class CafeMenu implements Menu {
+public class CafeMenu extends MenuComponent implements Menu {
     private HashMap<String, MenuItem> menuItems = new HashMap<>();
 
-    public CafeMenu() {
+    public CafeMenu(String cafeMenu, String dinner) {
         addItem("Veggie Burger and Air Fries",
                 "Veggie burger on a whole wheat bun, lettuce, tomato, and fries",
                 true, 3.99);
@@ -25,12 +25,16 @@ public class CafeMenu implements Menu {
         menuItems.put(name, menuItem);
     }
 
-    public Map<String, MenuItem> getItems() {
-        return menuItems;
-    }
+   // public Map<String, MenuItem> getItems() {
+     //   return menuItems;
+   // }
 
     @Override
     public Iterator<MenuItem> createIterator() {
         return menuItems.values().iterator();
     }
+
+
+
+
 }

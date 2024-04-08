@@ -1,10 +1,9 @@
 package edu.iu.habahram.DinerPancakeHouseMerge.model;
 
-import java.awt.*;
 import java.util.ArrayList;
 
-public class Menus extends MenuComponent{
-    ArrayList<MenuComponent> menuComponents = new ArrayList<MenuComponent>();
+public class Menus extends MenuComponent {
+    ArrayList<MenuComponent> menuComponents = new ArrayList<>();
     String name;
     String description;
 
@@ -13,7 +12,7 @@ public class Menus extends MenuComponent{
         this.description = description;
     }
 
-    public void add(DinerMenu menuComponent) {
+    public void add(MenuComponent menuComponent) {
         menuComponents.add(menuComponent);
     }
 
@@ -22,7 +21,7 @@ public class Menus extends MenuComponent{
     }
 
     public MenuComponent getChild(int i) {
-        return (MenuComponent)menuComponents.get(i);
+        return menuComponents.get(i);
     }
 
     public String getName() {
@@ -43,4 +42,5 @@ public class Menus extends MenuComponent{
         }
         return items.toArray(new MenuItem[0]);
     }
+
 }
